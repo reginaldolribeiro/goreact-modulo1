@@ -2,6 +2,8 @@ import React, { Component, Fragment } from "react";
 import { render } from "react-dom";
 import Button from "./Button";
 
+import "./style.css";
+
 class App extends Component {
   state = {
     counter: 0
