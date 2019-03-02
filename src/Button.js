@@ -1,27 +1,33 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-export default class Button extends Component {
-  static defaultProps = {
-    children: "Salvar"
-  };
+const Button = props => (
+  <button onClick={props.onClick}>{props.children}</button>
+);
 
-  static propTypes = {
-    onClick: PropTypes.func.isRequired,
-    children: PropTypes.string
-  };
+Button.defaultProps = {
+  children: "Salvar"
+};
 
-  render() {
-    // return <a href="#">{this.props.children}</a>;
-    return <button onClick={this.props.onClick}>{this.props.children}</button>;
-  }
-}
+Button.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  children: PropTypes.string
+};
 
-// Button.defaultProps = {
-//   children: "Salvar"
-// };
+export default Button;
 
-// Button.propTypes = {
-//   onClick: PropTypes.func.isRequired,
-//   children: PropTypes.string
-// };
+// export default class Button extends Component {
+//   static defaultProps = {
+//     children: "Salvar"
+//   };
+
+//   static propTypes = {
+//     onClick: PropTypes.func.isRequired,
+//     children: PropTypes.string
+//   };
+
+//   render() {
+//     // return <a href="#">{this.props.children}</a>;
+//     return <button onClick={this.props.onClick}>{this.props.children}</button>;
+//   }
+// }
