@@ -7,10 +7,17 @@ class App extends Component {
     counter: 0
   };
 
+  // Interceptando o render e dizendo quando ele deve ser executado ou não, neste caso,
+  // ele para de executar quando o valor do counter for 10
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   console.log(this.state.counter);
+  //   return nextState.counter <= 10;
+  // }
+
   handleClick = () => {
     // assincrono
     this.setState({ counter: this.state.counter + 1 });
-    console.log(this.state.counter);
+    //console.log(this.state.counter);
 
     // sincrono
     // this.setState({ counter: this.state.counter + 1 }, () => {
